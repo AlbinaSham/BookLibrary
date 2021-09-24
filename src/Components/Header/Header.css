@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+   
+
+}
+
+.NavBar{
+    
+    font-size: 2rem;
+}
+.links{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    text-decoration: none;
+}
+
+.linkHome {
+    position:relative;
+    width: 25%;
+    color:#ecf0f1;
+    text-decoration:none;
+    border-radius:5px;
+    border:solid 1px #345B63;
+    background:#035397;
+    text-align:center;
+    padding:16px 18px 14px;
+  
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    transition: all 0.1s;
+  
+    -webkit-box-shadow: 0px 6px 0px #001E6C;
+    -moz-box-shadow: 0px 6px 0px #001E6C;
+    box-shadow: 0px 6px 0px #001E6C;
+}
+
+.linkWishList{
+    position:relative;
+    width: 25%;
+    color:#ecf0f1;
+    text-decoration:none;
+    border-radius:5px;
+    border:solid 1px #f39c12;
+    background:#e67e22;
+    text-align:center;
+    padding:16px 18px 14px;
+    margin-left: 2%;
+  
+    -webkit-transition: all 0.1s;
+    -moz-transition: all 0.1s;
+    transition: all 0.1s;
+  
+    -webkit-box-shadow: 0px 6px 0px #d35400;
+    -moz-box-shadow: 0px 6px 0px #d35400;
+    box-shadow: 0px 6px 0px #d35400;
+}
