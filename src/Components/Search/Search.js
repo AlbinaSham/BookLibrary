@@ -1,4 +1,4 @@
-import React, { useState }  from "react";
+import React, { useState, useEffect }  from "react";
 import axios from "axios"; 
 
 
@@ -17,8 +17,8 @@ const Search = () => {
     const [apiKey, setApiKey] = useState("AIzaSyCr_GZNXUb9AUJKtAQn8-bF5J89RZFHc8E");
 
 
-    const handleSetResult = (event) =>{
-           event.preventDefault();
+    const handleSetResult = () =>{
+           
        axios.get("https://www.googleapis.com/books/v1/volumes?q="+inputText+"&key"+apiKey+"&maxResults=12")    
        .then(data => {
            if (!data.errors) {
@@ -29,6 +29,9 @@ const Search = () => {
            }
        })
     };
+    useEffect(() => {
+        handleSetResult();
+    }, [inputText]);
 
     return(
         <div >
@@ -36,7 +39,15 @@ const Search = () => {
                <form className = "searchForm" >
                    <input className = "searchInput"
                      value = {inputText}
-                     onChange = {(e) => setInputText(e.target.value)}
+                     onChange = {(e) => {
+                        e.preventDefault();
+                        setInputText(e.target.value);
+
+                     }
+
+                     
+                        
+                    }
                      type="text"
                      placeholder="Search for books by title..." />
                         <button className = "searchButton"

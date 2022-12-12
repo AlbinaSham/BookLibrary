@@ -8,6 +8,7 @@
   height: 450px;
   border: solid 1px #035397;
   border-radius: 8px;
+  
 }
 
 .cardImage{
@@ -26,6 +27,7 @@ img{
     width: 96%;
     margin-left: 4%;
     height: 100px;
+    overflow: hidden;
 }
 .cardInfo a {
  
